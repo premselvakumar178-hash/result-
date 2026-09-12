@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Login -->
+    <div class="card" id="loginSection">
+
+        <div class="logo">Student Result Portal</div>
+
+        <p class="subtitle">
+            Login to view your academic result
+        </p>
+
+        <label for="regNo">Register Number</label>
+        <input
+            type="text"
+            id="regNo"
+            placeholder="Enter Register Number"
+        >
+
+        <label for="pin">4-Digit PIN</label>
+        <input
+            type="password"
+            id="pin"
+            maxlength="4"
+            placeholder="Enter PIN"
+        >
+
+        <button onclick="login()">Login</button>
+
+        <p id="error" class="error"></p>
+
+    </div>
+
+
+    <!-- Result -->
+    <div class="card result" id="resultSection">
+
+        <div class="logo">Academic Result</div>
+
+        <div class="student-info">
+            <p>
+                <strong>Name:</strong>
+                <span id="studentName"></span>
+            </p>
+
+            <p>
+                <strong>Register No:</strong>
+                <span id="studentRegNo"></span>
+            </p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Marks</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Tamil</td>
+                    <td id="tamil"></td>
+                </tr>
+
+                <tr>
+                    <td>English</td>
+                    <td id="english"></td>
+                </tr>
+
+                <tr>
+                    <td>Mathematics</td>
+                    <td id="maths"></td>
+                </tr>
+
+                <tr>
+                    <td>Physics</td>
+                    <td id="physics"></td>
+                </tr>
+
+                <tr>
+                    <td>Chemistry</td>
+                    <td id="chemistry"></td>
+                </tr>
+
+                <tr>
+                    <td>Biology</td>
+                    <td id="biology"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <p>
+            <strong>Total:</strong>
+            <span id="total"></span>
+        </p>
+
+        <p>
+            <strong>Average:</strong>
+            <span id="average"></span>
+        </p>
+
+        <p>
+            <strong>Rank:</strong>
+            <span id="rank"></span>
+        </p>
+
+        <p>
+            <strong>Result:</strong>
+            <span id="result"></span>
+        </p>
+
+        <button class="logout" onclick="logout()">
+            Logout
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
